@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison Éternelle - Vestidos de Novia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">Maison Éternelle</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#coleccion">Colección</a></li>
+        <li><a href="#cita">Pedir Cita</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h2>Tu historia empieza con un vestido</h2>
+      <p>Diseños exclusivos hechos a medida para reflejar tu esencia.</p>
+      <a href="#cita" class="btn">Agendar cita</a>
+    </div>
+  </section>
+
+  <section id="coleccion" class="collection">
+    <h2>Colección Lovers</h2>
+    <div id="vestidos-container" class="grid"></div>
+  </section>
+
+  <section id="cita" class="appointment">
+    <h2>Solicitá tu cita personalizada</h2>
+    <form id="form-cita">
+      <input type="text" id="nombre" placeholder="Tu nombre" required />
+      <input type="email" id="email" placeholder="Tu email" required />
+      <input type="date" id="fecha" required />
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </section>
+
+  <footer id="contacto">
+    <p>© 2025 Maison Éternelle · Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
