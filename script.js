@@ -24,3 +24,6 @@ form.addEventListener('submit', (e) => {
   alert(`¡Gracias ${nombre}! Tu cita fue solicitada para el ${fecha}.`);
   form.reset();
 });
+
+// <!-- prueba -->
+
