@@ -9,6 +9,16 @@ soundBtn.addEventListener('click', () => {
   soundIcon.textContent = video.muted ? '🔇' : '🔊';
 });
 
+// Toggle del menú hamburguesa
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+
+
 
 
 

@@ -8,7 +8,7 @@ body {
   color: #333;
 }
 
-
+/* ---------------- HEADER ---------------- */
 header {
   position: fixed;
   top: 0;
@@ -29,6 +29,7 @@ header {
   box-sizing: border-box;
 }
 
+/* Menú general */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -60,7 +61,7 @@ header {
   width: 100%;
 }
 
-
+/* Logo */
 .logo {
   position: absolute;
   left: 50%;
@@ -82,7 +83,7 @@ header {
   color: #777;
 }
 
-/* Video .hero , se conecta con class="hero" del html para agregarle estilos!!!!1*/ 
+/* ---------------- VIDEO ---------------- */
 .hero video {
   width: 100%;
   height: 100vh;
@@ -90,25 +91,7 @@ header {
   margin-top: 90px; 
 }
 
-/* para q se vea bien en el celu */
-@media (max-width: 900px) {
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .hero video {
-    margin-top: 120px;
-  }
-}
-
+/* ---------------- ICONOS ---------------- */
 .material-symbols-outlined {
   font-size: 20px;
   color: #333;
@@ -142,57 +125,83 @@ header {
   transform: scale(1.1);
 }
 
-/* 🌸 Versión mobile mejorada */
+/* ---------------- MENU HAMBURGUESA ---------------- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 900px) {
-  header {
-    padding: 10px 0;
+  /* Mostrar el botón hamburguesa */
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    left: 25px;
+    top: 30px;
+  }
+
+  /* Ocultar menú por defecto */
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #f8f7f3;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    display: none;
+  }
+
+  /* Cuando se activa el menú */
+  .nav-links.active {
+    display: flex;
   }
 
   .navbar {
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: auto;
-    padding: 10px 0;
-    gap: 5px;
-  }
-
-  .nav-left,
-  .nav-right {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    padding: 10px 25px;
   }
 
   .logo {
-    position: static;
-    transform: none;
-    margin: 5px 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
   }
 
-  .logo h1 {
-    font-size: 16px;
-    margin-bottom: 2px;
-  }
-
-  .logo p {
-    font-size: 11px;
-    margin: 0;
-  }
-
-  .navbar a {
-    font-size: 13px;
-    letter-spacing: 0.06em;
-  }
-
-  .hero video {
-    margin-top: 160px; /* para que el header no tape el video */
+  .bag {
+    position: absolute;
+    right: 25px;
   }
 }
 
+/* Versión escritorio: mostrar menú normal */
+@media (min-width: 901px) {
+  .menu-toggle {
+    display: none;
+  }
 
-
-
-
+  .nav-links {
+    display: flex;
+  }
+}
