@@ -144,3 +144,56 @@ header {
 
 
 
+
+/* --- Versión para el telefono, noc si esta bien hacerlo asi separado PREGUNTAR --- */
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f8f7f3;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    height: auto;
+  }
+
+  .nav-left, .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .logo {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .logo h1 {
+    font-size: 16px;
+  }
+
+  .logo p {
+    font-size: 11px;
+  }
+
+  .navbar a {
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+
+  .hero video {
+    margin-top: 140px; /* ajusta para que no tape el header */
+  }
+}
+
+
+
+
