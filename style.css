@@ -158,7 +158,7 @@ header {
   .menu-toggle {
     display: flex;
     position: absolute;
-    left: 25px;
+    left: 20px;            /* más pegado al borde izquierdo */
     top: 50%;
     transform: translateY(-50%);
   }
@@ -169,6 +169,7 @@ header {
     padding: 0;
     height: 70px;
     position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* línea fina debajo */
   }
 
   .logo {
@@ -178,12 +179,15 @@ header {
 
   .bag {
     position: absolute;
-    right: 25px;
+    right: 20px;           /* pegado al borde derecho */
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* MENÚ ACTIVO */
+  /* Menú desplegable */
   .navbar ul.active {
     display: flex;
     position: absolute;
