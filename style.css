@@ -150,7 +150,7 @@ header {
 
 /* para el celu PREGUNATRRR NO EM QUEDA BIEN LLORO */
 /* Versión móvil (celulares tipo iPhone 13/14/15, Samsung, etc.) */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
   .navbar {
     display: flex;
