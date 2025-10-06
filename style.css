@@ -148,9 +148,8 @@ header {
   transform: scale(1.1);
 }
 
-/* para el celu PREGUNATRRR NO EM QUEDA BIEN LLORO */
-/* Versión móvil (celulares tipo iPhone 13/14/15, Samsung, etc.) */
-@media (max-width: 800px) {
+/* para el celu PREGUNATRRR NO EM QUEDA BIEN LLORO PREGUNTAAAAAAAAAAAAAAAAAR */  
+@media (max-width: 768px) {
 
   .navbar {
     display: flex;
@@ -201,19 +200,17 @@ header {
     font-size: 12px;
   }
 
-  /* Carrito alineado */
   .bag {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
+    top: 12%;
     right: 20px;
-    top: 50%;
     transform: translateY(-50%);
     font-size: 22px;
   }
 
-  /* Menú oculto por defecto */
   .navbar ul {
     display: none;
     flex-direction: column;
@@ -227,7 +224,6 @@ header {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  /* Menú activo */
   .navbar ul.active {
     display: flex;
     align-items: center;
