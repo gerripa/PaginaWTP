@@ -1,6 +1,6 @@
 console.log("Amélie Atelier — inicio cargado correctamente");
 
-// VIDEO: control de sonido
+//para lo del control del sonido del vidoe 
 const video = document.getElementById('heroVideo');
 const soundBtn = document.getElementById('soundToggle');
 const soundIcon = document.getElementById('soundIcon');
@@ -10,7 +10,7 @@ soundBtn.addEventListener('click', () => {
   soundIcon.textContent = video.muted ? '🔇' : '🔊';
 });
 
-// MENÚ HAMBURGUESA
+// para el menu desplegable 
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 const overlay = document.getElementById('overlay');
