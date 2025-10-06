@@ -159,14 +159,16 @@ header {
     display: flex;
     position: absolute;
     left: 25px;
-    top: 35px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .navbar {
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 0;
     height: 70px;
+    position: relative;
   }
 
   .logo {
@@ -177,7 +179,8 @@ header {
   .bag {
     position: absolute;
     right: 25px;
-    top: 32px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   /* MENÚ ACTIVO */
