@@ -2,65 +2,62 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- para q se vea bien en el celu juju-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amélie Atelier</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" /> <!--íconos de Google!!!-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="logoAA.png?v=2"> <!-- icono de la pestania medio al ped pero fue-->
+  <link rel="icon" type="image/png" href="logoAA.png?v=2">
 </head>
-<body> <!-- todo lo q el usuario ve en la pantlla nice-->
-
-  <!-- Encabezado!! quedo lindo -->
+<body>
   <header>
-  <nav class="navbar">
-    <!-- Botón hamburguesa -->
-    <button class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <nav class="navbar">
+      <!-- Botón hamburguesa -->
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <!-- Logo -->
-    <div class="logo">
-      <a href="index.html">
-        <h1>AMÉLIE ATELIER</h1>
-        <p>Bridal Studio</p>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <h1>AMÉLIE ATELIER</h1>
+          <p>Bridal Studio</p>
+        </a>
+      </div>
+
+      <!-- Menú -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">SHOP</a></li>
+        <li><a href="#">EDITORIAL</a></li>
+        <li><a href="#">APPOINTMENTS</a></li>
+        <li><a href="#">ABOUT US</a></li>
+      </ul>
+
+      <!-- Icono del carrito -->
+      <a href="#" class="bag">
+        <span class="material-symbols-outlined">shopping_bag</span>
       </a>
-    </div>
+    </nav>
+  </header>
 
-    <!-- Menú -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#">SHOP</a></li>
-      <li><a href="#">EDITORIAL</a></li>
-      <li><a href="#">APPOINTMENTS</a></li>
-      <li><a href="#">ABOUT US</a></li>
-    </ul>
-
-    <!-- Icono del carrito -->
-    <a href="#" class="bag">
-      <span class="material-symbols-outlined">shopping_bag</span>
-    </a>
-  </nav>
-</header>
-
-
-  <!-- Videom (preguntar si lo puedo usar es legal? ahr)-->
+  <!-- Video -->
   <section class="hero">
-  <video id="heroVideo" autoplay muted loop playsinline>
-    <source src="Amelie Atelier.mp4" type="video/mp4">
-    Tu navegador no soporta videos HTML5.
-  </video>
+    <video id="heroVideo" autoplay muted loop playsinline>
+      <source src="Amelie Atelier.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
 
-  <!-- Botón de sonido dle vidoe q puse -->
-  <button id="soundToggle" class="sound-btn" aria-label="Toggle sound">
-    <span id="soundIcon">🔇</span>
-  </button>
-</section>
-
+    <!-- Botón de sonido -->
+    <button id="soundToggle" class="sound-btn" aria-label="Toggle sound">
+      <span id="soundIcon">🔇</span>
+    </button>
+  </section>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
