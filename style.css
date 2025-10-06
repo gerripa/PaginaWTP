@@ -1,15 +1,98 @@
-/* Archivo de estilos: define colores, tipografías y diseño visual */
-
 body {
-  background-color: white;
-  color: black;
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #3D2F2A; /* Flannel */
+  color: #3D2F2A;
 }
 
-header, footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f0f0f0;
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:  #7f7774; /* Taupe */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 3rem;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('assets/img/tu-imagen-canva.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  color:#382d28;
+  font-weight: 400;
+}
+
+/* VIDEO SECTION */
+.video-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(222, 220, 214, 0.2); /* Meringue translúcido */
+}
+
+.collection-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #837873;
+  color: white;
+  padding: 0.6rem 2.5rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+/* Mostrar logo al hacer scroll */
+.show-logo .logo {
+  opacity: 1;
 }

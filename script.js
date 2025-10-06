@@ -1,5 +1,17 @@
-// Archivo JavaScript: acá vamos a agregar las funciones y la interacción del sitio
+const header = document.getElementById('header');
+const videoSection = document.getElementById('video');
 
-console.log("Página lista para comenzar 💻");
+window.addEventListener('scroll', () => {
+  const videoTop = videoSection.offsetTop;
+  const scrollPos = window.scrollY;
+
+  if (scrollPos >= videoTop - 100) {
+    header.classList.add('show-logo');
+  } else {
+    header.classList.remove('show-logo');
+  }
+});
+
+
 
 
