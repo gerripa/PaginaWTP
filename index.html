@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Amélie Atelier</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+  <!-- Tipografía y íconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="logoAA.png?v=2">
 </head>
+
 <body>
+  <!-- Encabezado -->
   <header>
     <nav class="navbar">
       <!-- Botón hamburguesa -->
@@ -18,7 +25,7 @@
         <span></span>
       </button>
 
-      <!-- Logo -->
+      <!-- Logo centrado -->
       <div class="logo">
         <a href="index.html">
           <h1>AMÉLIE ATELIER</h1>
@@ -26,7 +33,7 @@
         </a>
       </div>
 
-      <!-- Menú -->
+      <!-- Menú de navegación -->
       <ul class="nav-links" id="navLinks">
         <li><a href="#">SHOP</a></li>
         <li><a href="#">EDITORIAL</a></li>
@@ -34,14 +41,17 @@
         <li><a href="#">ABOUT US</a></li>
       </ul>
 
-      <!-- Icono del carrito -->
+      <!-- Carrito -->
       <a href="#" class="bag">
-        <span class="material-symbols-outlined">shopping_bag</span>
+        <i class="fa-solid fa-bag-shopping"></i>
       </a>
     </nav>
   </header>
 
-  <!-- Video -->
+  <!-- Overlay oscuro para mobile -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Sección principal con video -->
   <section class="hero">
     <video id="heroVideo" autoplay muted loop playsinline>
       <source src="Amelie Atelier.mp4" type="video/mp4">
@@ -54,6 +64,8 @@
     </button>
   </section>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
+
