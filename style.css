@@ -467,7 +467,6 @@ header {
   display: none;
   margin-top: 40px;
 }
-
 .thanks img {
   width: 80%;
   max-width: 900px;
@@ -476,12 +475,10 @@ header {
   opacity: 0.98;
   margin-top: 30px;
 }
-
 .thanks {
   display: none;
   margin-top: 40px;
 }
-
 .thanks img {
   width: 80%;
   max-width: 900px;
@@ -501,12 +498,10 @@ header {
   padding: 0 20px; 
   margin-top: -5px; 
 }
-
 .carousel-container {
   width: 100%;
   max-width: 900px;
 }
-
 /* syle para el espejo en el carrusel */
 .mirror-slide {
   display: flex;
@@ -514,13 +509,11 @@ header {
   align-items: center;
   min-height: 70vh;
 }
-
 .mirror-slide img {
   max-width: 600px;
   width: 100%;
   height: auto;
 }
-
 /* Estilo del texto About Us */
 .about-slide {
   padding: 60px 40px;
@@ -530,7 +523,6 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-
 .about-slide h2 {
   font-weight: 400;
   letter-spacing: 0.25em;
@@ -539,7 +531,6 @@ header {
   color: #333;
   text-transform: uppercase;
 }
-
 .about-slide p {
   font-size: 17px;
   line-height: 1.9;
@@ -549,17 +540,17 @@ header {
   letter-spacing: 0.02em;
 }
 
-/* Flechas del carrusel personalizadas */
+/* Flechas del carrusel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(74, 48, 23, 0.3);
+  background-color: rgba(206, 155, 108, 0.3);
   border-radius: 50%;
   padding: 20px;
 }
 
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(171, 124, 82, 0.5);
 }
 
 /* Sección editorial */
@@ -567,7 +558,6 @@ header {
   background-color: #fff;
   padding: 0;
 }
-
 .editorial-title {
   text-align: center;
   padding: 40px 20px 40px; 
@@ -578,26 +568,22 @@ header {
   color: #333;
   margin: 0;
 }
-
 .editorial-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
 }
-
 .editorial-item {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
-
 .editorial-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.7s ease;
 }
-
 .editorial-item:hover img {
   transform: scale(1.05);
 }
@@ -606,9 +592,8 @@ header {
 footer {
   background-color: #f8f7f3;
   padding: 60px 40px 40px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 0px solid rgba(0, 0, 0, 0.08);
 }
-
 .footer-content {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -617,16 +602,13 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .footer-logo img {
   max-width: 120px;
   height: auto;
 }
-
 .footer-form {
   text-align: center;
 }
-
 .footer-form h3 {
   font-size: 16px;
   letter-spacing: 0.15em;
@@ -635,7 +617,6 @@ footer {
   font-weight: 400;
   color: #333;
 }
-
 .footer-form input {
   width: 100%;
   max-width: 250px;
@@ -647,11 +628,10 @@ footer {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
-
 .footer-form button {
   padding: 10px 30px;
   margin-top: 15px;
-  background-color: #000;
+  background-color: #503827;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -661,12 +641,10 @@ footer {
   text-transform: uppercase;
   transition: all 0.3s ease;
 }
-
 .footer-form button:hover {
-  background-color: #333;
+  background-color: #503827;
   transform: scale(1.03);
 }
-
 .footer-credit {
   text-align: right;
   font-size: 13px;
@@ -674,13 +652,12 @@ footer {
   letter-spacing: 0.05em;
   line-height: 1.6;
 }
-
 .footer-credit strong {
   color: #555;
   font-weight: 400;
 }
 
-/* Responsive */
+/* Responsive PARA Q SE AVEA BIEN EL LOS TELELFONOS */
 @media (max-width: 768px) {
   .editorial-grid {
     grid-template-columns: 1fr;
@@ -725,7 +702,7 @@ footer {
   }
 }
 
-/* Estilo del enlace "Volver al inicio" del checkout */
+/* Volver al inicio del checkout VER LO DE LOS ################ */
 #backHome a {
   color: #000;
   text-decoration: none;
@@ -735,11 +712,24 @@ footer {
   border-bottom: 1px solid #000;
   transition: opacity 0.3s ease;
 }
-
 #backHome a:hover {
   opacity: 0.6;
+}
+#cart-count-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 
-
+/* ver si me quedaron repetidos los respodive mediaaaaaaaaaaa */

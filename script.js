@@ -1,26 +1,30 @@
+
 console.log("Amélie Atelier – sitio cargado correctamente");
 
-//video y menu telefono
-const video = document.getElementById('heroVideo');
-const soundBtn = document.getElementById('soundToggle');
-const soundIcon = document.getElementById('soundIcon');
+// menu y el video
+const video = document.getElementById('heroVideo'); 
+const soundBtn = document.getElementById('soundToggle'); 
+const soundIcon = document.getElementById('soundIcon'); 
+
 if (soundBtn && video) {
   soundBtn.addEventListener('click', () => {
     video.muted = !video.muted;
-    soundIcon.textContent = video.muted ? '🔇' : '🔊';
+    soundIcon.textContent = video.muted ? '🔇' : '🔊'; //la funcion de ? q vimos 
   });
 }
 
+// Menú "hamburguesa" para cuando se habra desde el telefono 
+const menuToggle = document.getElementById('menuToggle'); 
+const navLinks = document.getElementById('navLinks');    
+const overlay = document.getElementById('overlay');       
 
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-const overlay = document.getElementById('overlay');
 if (menuToggle) {
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     overlay.classList.toggle('active');
   });
 }
+
 if (overlay) {
   overlay.addEventListener('click', () => {
     navLinks.classList.remove('active');
@@ -28,44 +32,38 @@ if (overlay) {
   });
 }
 
-//carrito para comprar
+//carrioooooooooooo 
+//Esta parte como que agarra/recupera el carrito del usuario que estaba guardado en el navegador.
+//Si es la primera vez que entra, crea un carrito vacío ([]) para empezar.
 let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-const cartOverlay = document.getElementById('cartOverlay');
-const openCart = document.getElementById('openCart');
-const closeCart = document.getElementById('closeCart');
-const cartContent = document.getElementById('cart-content');
-const cartCount = document.getElementById('cart-count');
 
-const bagIcon = document.querySelector('.fa-bag-shopping');
+const cartOverlay = document.getElementById('cartOverlay'); 
+const openCart = document.getElementById('openCart');      
+const closeCart = document.getElementById('closeCart');     
+const cartContent = document.getElementById('cart-content');
+const cartCount = document.getElementById('cart-count');    
+const bagIcon = document.querySelector('.fa-bag-shopping'); //la bolsa en el header
+
+//para poner el ciculito arriba del carrito
 const badge = document.createElement('span');
 badge.id = 'cart-count-badge';
 bagIcon.parentElement.style.position = 'relative';
 bagIcon.parentElement.appendChild(badge);
-Object.assign(badge.style, {
-  position: "absolute",
-  top: "-6px",
-  right: "-10px",
-  backgroundColor: "#000",
-  color: "#fff",
-  fontSize: "10px",
-  width: "16px",
-  height: "16px",
-  borderRadius: "50%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-});
 
+// aca arranco con la funcion para actualizar el carrito
 function updateCart() {
   cartContent.innerHTML = '';
   if (cartItems.length === 0) {
     cartContent.innerHTML = '<p class="empty-cart">YOUR CART IS EMPTY</p>';
   } else {
     let total = 0;
+
     cartItems.forEach((item, index) => {
-      total += item.price * item.quantity;
+      total += item.price * item.quantity; // sumo el total 
+
       const div = document.createElement('div');
       div.classList.add('cart-item');
+
       div.innerHTML = `
         <p><strong>${item.name}</strong></p>
         <div class="cart-controls">
@@ -79,6 +77,7 @@ function updateCart() {
       cartContent.appendChild(div);
     });
 
+    // muestro el total final
     const totalDiv = document.createElement('div');
     totalDiv.classList.add('cart-total');
     totalDiv.innerHTML = `<p><strong>Total:</strong> $${total.toLocaleString()}</p>`;
@@ -88,26 +87,28 @@ function updateCart() {
     clearBtn.textContent = 'Empty Cart';
     clearBtn.classList.add('btn-clear');
     clearBtn.addEventListener('click', () => {
-      cartItems = [];
-      updateCart();
+      cartItems = []; 
+      updateCart();   
     });
     cartContent.appendChild(clearBtn);
 
+    // Botón para comprar que me va a llevar al checkout (que lo hice en otra pagina html)
     const buyBtn = document.createElement('button');
     buyBtn.textContent = 'Buy Now';
     buyBtn.classList.add('btn-buy');
     buyBtn.addEventListener('click', () => {
-      window.location.href = 'checkout.html';
+      window.location.href = 'checkout.html'; 
     });
     cartContent.appendChild(buyBtn);
   }
 
   localStorage.setItem('cart', JSON.stringify(cartItems));
+
   cartCount.textContent = cartItems.length;
   badge.textContent = cartItems.length;
 }
 
-//catalogo con las dos fotos 
+//aca va el catalogo de los profcutos aro el array con cada  unno q aparece
 const productos = [
   { name: "Isolde Dress", price: 2450, image: "img/dress5a.webp", hover: "img/dress5b.webp" },
   { name: "Clarisse Dress", price: 2750, image: "img/dress8a.webp", hover: "img/dress8b.webp" },
@@ -123,7 +124,7 @@ const productos = [
 
 function renderCatalogo() {
   const contenedor = document.getElementById("catalogo");
-  if (!contenedor) return;
+  if (!contenedor) return; 
 
   contenedor.innerHTML = productos.map(prod => `
     <div class="col-md-3 col-sm-6 text-center product">
@@ -139,20 +140,23 @@ function renderCatalogo() {
         Add to Bag
       </button>
     </div>
-  `).join('');
+  `).join(''); 
 
-  // Reasignar eventos "Add to Bag"
+  // para add tod e bag
   document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', () => {
       const name = button.dataset.name;
       const price = parseFloat(button.dataset.price);
+
       const existing = cartItems.find(i => i.name === name);
       if (existing) {
         existing.quantity++;
       } else {
         cartItems.push({ name, price, quantity: 1 });
       }
-      updateCart();
+
+      updateCart(); // limpio el carrito
+
       Swal.fire({
         icon: 'success',
         title: 'Added to cart!',
@@ -166,22 +170,24 @@ function renderCatalogo() {
   });
 }
 
+//para atodo lo q es el carrito
 
 cartContent.addEventListener('click', (e) => {
   const index = e.target.dataset.index;
   if (e.target.classList.contains('remove-item')) {
-    cartItems.splice(index, 1);
+    cartItems.splice(index, 1); 
   } else if (e.target.classList.contains('plus')) {
-    cartItems[index].quantity++;
+    cartItems[index].quantity++; 
   } else if (e.target.classList.contains('minus')) {
     if (cartItems[index].quantity > 1) {
-      cartItems[index].quantity--;
+      cartItems[index].quantity--; 
     } else {
-      cartItems.splice(index, 1);
+      cartItems.splice(index, 1); 
     }
   }
-  updateCart();
+  updateCart(); 
 });
+
 
 if (openCart) openCart.addEventListener('click', (e) => {
   e.preventDefault();
@@ -191,11 +197,44 @@ if (closeCart) closeCart.addEventListener('click', () => {
   cartOverlay.classList.remove('active');
 });
 
-// Inicializar todo
+
+
 document.addEventListener("DOMContentLoaded", () => {
   renderCatalogo();
   updateCart();
 });
+
+
+// para q los link tocas y se mueva "suaaave"
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+//el formulario de citas uso un sweetalert 
+const appointmentForm = document.getElementById('appointmentForm');
+if (appointmentForm) {
+  appointmentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    Swal.fire({
+      icon: 'success',
+      title: '¡Cita Reservada!',
+      text: 'Nos pondremos en contacto contigo pronto',
+      confirmButtonColor: '#000',
+      confirmButtonText: 'Perfecto'
+    });
+    appointmentForm.reset(); 
+  });
+}
 
 
 
