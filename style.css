@@ -1,4 +1,5 @@
 /* tipografia y estilo generlar d emi marcaaa*/
+/* tipografia y estilo generlar d emi marcaaa*/
 body {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Header fijo */
 /* Header fijo */
 header {
   position: fixed;
@@ -25,6 +27,7 @@ header {
 }
 
 /* Menú principal de enlaces */
+/* Menú principal de enlaces */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -34,6 +37,7 @@ header {
 }
 
 /* Enlaces del menú */
+/* Enlaces del menú */
 .navbar a {
   text-decoration: none;
   color: #333;
@@ -41,6 +45,7 @@ header {
   transition: all 0.3s ease;
 }
 
+/* Subrayado animado al pasar el mouse */
 /* Subrayado animado al pasar el mouse */
 .navbar a::after {
   content: "";
@@ -56,6 +61,7 @@ header {
   width: 100%;
 }
 
+/* Logo centrado */
 /* Logo centrado */
 .logo {
   position: absolute;
@@ -77,12 +83,22 @@ header {
 }
 
 /* Ícono del carrito */
+/* Ícono del carrito */
 .fa-bag-shopping {
   font-size: 20px;
   color: #333;
   transition: all 0.3s ease;
 }
 
+/* Video de la portada */
+.hero video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  margin-top: 0;
+}
+
+/* Menú desplegable para móvil */
 /* Video de la portada */
 .hero video {
   width: 100%;
@@ -113,6 +129,7 @@ header {
 }
 
 /* Capa oscura semitransparente de fondo */
+/* Capa oscura semitransparente de fondo */
 .overlay {
   position: fixed;
   inset: 0;
@@ -127,6 +144,7 @@ header {
   opacity: 1;
 }
 
+/* Botón de sonido */
 /* Botón de sonido */
 .sound-btn {
   position: absolute;
@@ -145,6 +163,7 @@ header {
 }
 
 /* Versión móvil */
+/* Versión móvil */
 @media (max-width: 768px) {
   .navbar {
     display: flex;
@@ -156,6 +175,8 @@ header {
     background-color: #f8f7f3;
     position: relative;
   }
+  .menu-toggle { display: flex; }
+  .logo h1 { font-size: 17px; letter-spacing: 0.15em; }
   .menu-toggle { display: flex; }
   .logo h1 { font-size: 17px; letter-spacing: 0.15em; }
   .bag {
