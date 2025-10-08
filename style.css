@@ -1,5 +1,5 @@
 /* tipografia y estilo generlar d emi marcaaa*/
-/* tipografia y estilo generlar d emi marcaaa*/
+
 body {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
@@ -8,7 +8,7 @@ body {
 }
 
 /* Header fijo */
-/* Header fijo */
+
 header {
   position: fixed;
   top: 0;
@@ -27,7 +27,7 @@ header {
 }
 
 /* Menú principal de enlaces */
-/* Menú principal de enlaces */
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -37,7 +37,7 @@ header {
 }
 
 /* Enlaces del menú */
-/* Enlaces del menú */
+
 .navbar a {
   text-decoration: none;
   color: #333;
@@ -45,8 +45,8 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Subrayado animado al pasar el mouse */
-/* Subrayado animado al pasar el mouse */
+/* Subrayado animado para cuandi paso el mouse */
+
 .navbar a::after {
   content: "";
   position: absolute;
@@ -62,7 +62,7 @@ header {
 }
 
 /* Logo centrado */
-/* Logo centrado */
+
 .logo {
   position: absolute;
   left: 50%;
@@ -83,7 +83,7 @@ header {
 }
 
 /* Ícono del carrito */
-/* Ícono del carrito */
+
 .fa-bag-shopping {
   font-size: 20px;
   color: #333;
@@ -98,14 +98,6 @@ header {
   margin-top: 0;
 }
 
-/* Menú desplegable para móvil */
-/* Video de la portada */
-.hero video {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  margin-top: 0;
-}
 
 /* Menú desplegable para móvil */
 .menu-toggle {
@@ -129,7 +121,6 @@ header {
 }
 
 /* Capa oscura semitransparente de fondo */
-/* Capa oscura semitransparente de fondo */
 .overlay {
   position: fixed;
   inset: 0;
@@ -144,7 +135,6 @@ header {
   opacity: 1;
 }
 
-/* Botón de sonido */
 /* Botón de sonido */
 .sound-btn {
   position: absolute;
@@ -162,8 +152,8 @@ header {
   transform: scale(1.1);
 }
 
-/* Versión móvil */
-/* Versión móvil */
+/* Versión telefonooo*/
+
 @media (max-width: 768px) {
   .navbar {
     display: flex;
@@ -214,7 +204,7 @@ header {
   }
 }
 
-/* Carrito de compras lateral */
+/* Carrito lateral */
 .cart-overlay {
   position: fixed;
   top: 0;
@@ -378,26 +368,6 @@ header {
   color: #fff;
 }
 
-/* Tallas visibles */
-.size-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 10px;
-  font-family: 'Cormorant Garamond', serif;
-}
-.size-option {
-  font-size: 14px;
-  color: #000;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-.size-option:hover,
-.size-option.active {
-  color: #777;
-}
-
 /* Botón add to bag */
 .add-to-cart {
   display: inline-block;
@@ -441,9 +411,9 @@ header {
   color: #222;
 }
 
-/* ESTILOS CHECKOUT */
+/* style para el checkout html */
 .checkout {
-  padding-top: 160px; /* Espacio para el header fijo */
+  padding-top: 160px; 
   text-align: center;
   background-color: #f8f7f3;
   min-height: 100vh;
@@ -492,6 +462,7 @@ header {
   transform: scale(1.03);
 }
 
+/*mensaje de gracias cuando ponene okayyy*/
 .thanks {
   display: none;
   margin-top: 40px;
@@ -505,7 +476,6 @@ header {
   opacity: 0.98;
   margin-top: 30px;
 }
-
 
 .thanks {
   display: none;
@@ -521,16 +491,15 @@ header {
   margin-top: 30px;
 }
 
-
-/* Sección del carrusel (espejo + about us) */
+/* Sección del carrusel, lo saque de bootstarp (espejo + about us) */
 .carousel-section {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  padding: 0 20px; /* eliminamos padding arriba */
-  margin-top: -5px; /* corrige micro espacio entre secciones */
+  padding: 0 20px; 
+  margin-top: -5px; 
 }
 
 .carousel-container {
@@ -538,7 +507,7 @@ header {
   max-width: 900px;
 }
 
-/* Estilo del espejo en el carrusel */
+/* syle para el espejo en el carrusel */
 .mirror-slide {
   display: flex;
   justify-content: center;
@@ -550,7 +519,6 @@ header {
   max-width: 600px;
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12));
 }
 
 /* Estilo del texto About Us */
@@ -584,7 +552,7 @@ header {
 /* Flechas del carrusel personalizadas */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(74, 48, 23, 0.3);
   border-radius: 50%;
   padding: 20px;
 }
@@ -594,7 +562,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Sección editorial SIN animaciones */
+/* Sección editorial */
 .editorial-section {
   background-color: #fff;
   padding: 0;

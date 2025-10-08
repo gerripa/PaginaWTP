@@ -1,7 +1,5 @@
 console.log("Amélie Atelier – sitio cargado correctamente");
-console.log("Amélie Atelier – sitio cargado correctamente");
 
-//video y menu telefono
 //video y menu telefono
 const video = document.getElementById('heroVideo');
 const soundBtn = document.getElementById('soundToggle');
@@ -12,12 +10,7 @@ if (soundBtn && video) {
     soundIcon.textContent = video.muted ? '🔇' : '🔊';
   });
 }
-if (soundBtn && video) {
-  soundBtn.addEventListener('click', () => {
-    video.muted = !video.muted;
-    soundIcon.textContent = video.muted ? '🔇' : '🔊';
-  });
-}
+
 
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
@@ -173,7 +166,7 @@ function renderCatalogo() {
   });
 }
 
-//eventos globales?//
+
 cartContent.addEventListener('click', (e) => {
   const index = e.target.dataset.index;
   if (e.target.classList.contains('remove-item')) {
