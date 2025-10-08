@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Lovers Collection - Amélie Atelier</title>
+
+  <!-- Fuentes, íconos y estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logoAA.png?v=2">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <button class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="logo">
+        <a href="index.html">
+          <h1>AMÉLIE ATELIER</h1>
+          <p>Bridal Studio</p>
+        </a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="index.html#about">EDITORIAL</a></li>
+          <li><a href="index.html#appointments">APPOINTMENTS</a></li>
+          <li><a href="index.html#about">ABOUT US</a></li>
+      </ul>
+
+      <a href="#" class="bag" id="openCart">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </a>
+    </nav>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Título -->
+  <section class="shop-header text-center mt-5 pt-5">
+    <h2 class="shop-title">SHOP THE NEW LOVERS COLLECTION</h2>
+  </section>
+
+  <!-- Catálogo generado dinámicamente -->
+  <section class="shop container my-5" id="shop">
+    <div id="catalogo" class="row gy-5"></div>
+  </section>
+
+  <!-- Carrito lateral -->
+  <div id="cartOverlay" class="cart-overlay">
+    <div class="cart-panel">
+      <button id="closeCart" class="close-btn">&times;</button>
+      <h2 class="cart-title">MY BAG (<span id="cart-count">0</span>)</h2>
+      <div id="cart-content" class="cart-content">
+        <p class="empty-cart">YOUR CART IS EMPTY</p>
+      </div>
+      <div class="cart-footer">
+        <a href="shop.html" class="cart-link">SHOP</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</body>
+</html>

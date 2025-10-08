@@ -2,30 +2,26 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- celu-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Amélie Atelier</title>
 
-  <!-- Tipografía etc etc  -->
+  <!-- Fuentes y estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-  <!-- para q conecte con el css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="logoAA.png?v=2">
-</head>
+
+  
 
 <body>
   <!-- Encabezado -->
   <header>
     <nav class="navbar">
-      <!-- Botón desplegable -->
       <button class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
 
-      <!-- Logo pricnipal de la amrca  -->
       <div class="logo">
         <a href="index.html">
           <h1>AMÉLIE ATELIER</h1>
@@ -33,16 +29,14 @@
         </a>
       </div>
 
-      
       <ul class="nav-links" id="navLinks">
-        <li><a href="#">SHOP</a></li>
-        <li><a href="#">EDITORIAL</a></li>
-        <li><a href="#">APPOINTMENTS</a></li>
-        <li><a href="#">ABOUT US</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="#about">EDITORIAL</a></li>
+        <li><a href="#appointments">APPOINTMENTS</a></li>
+        <li><a href="#about">ABOUT US</a></li>
       </ul>
 
-      <!-- Carrito de compars !!!-->
-      <a href="#" class="bag">
+      <a href="#" class="bag" id="openCart">
         <i class="fa-solid fa-bag-shopping"></i>
       </a>
     </nav>
@@ -50,20 +44,161 @@
 
   <div class="overlay" id="overlay"></div>
 
-  <!-- la seccion para el video garnde  -->
+  <!-- Sección principal con video -->
   <section class="hero">
     <video id="heroVideo" autoplay muted loop playsinline>
       <source src="Amelie Atelier.mp4" type="video/mp4">
       Tu navegador no soporta videos HTML5.
     </video>
-
-    <!-- Botón de sonido del vidooo  -->
     <button id="soundToggle" class="sound-btn" aria-label="Toggle sound">
       <span id="soundIcon">🔇</span>
     </button>
   </section>
 
+  <!-- Sección del carrusel: Espejo + About Us -->
+  <section class="carousel-section" id="about">
+    <div class="carousel-container">
+      <div id="mainCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+          
+          <!-- Slide 1: Espejo -->
+          <div class="carousel-item active">
+            <div class="mirror-slide">
+              <img src="img/espejo-amelie.png" alt="Amélie Atelier Mirror">
+            </div>
+          </div>
+
+          <!-- Slide 2: About Us -->
+          <div class="carousel-item">
+            <div class="about-slide">
+              <h2>About Us</h2>
+              <p>En Amélie Atelier creemos que cada mujer merece vivir su propio instante eterno. Nuestras piezas nacen del arte de transformar la delicadeza en carácter, la sutileza en presencia, y lo efímero en algo que perdura más allá del tiempo.</p>
+              
+              <p>Cada vestido es una creación única, pensada para la novia que busca elegancia sin esfuerzo, que valora los detalles silenciosos, las telas que respiran historia y los cortes que celebran la feminidad con autenticidad.</p>
+              
+              <p>Inspiradas en la nostalgia del romanticismo clásico y la estética atemporal del viejo mundo, nuestras colecciones combinan diseño contemporáneo con la sensibilidad de la alta costura artesanal.</p>
+              
+              <p>Amélie Atelier no viste solo un día: viste una emoción, un recuerdo y una versión más pura de vos misma. Porque cuando el amor se encuentra con la belleza, nace la magia.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Editorial -->
+  <section class="editorial-section">
+    <h2 class="editorial-title">EDITORIAL COLLECTION</h2>
+    
+    <div class="editorial-grid">
+      <div class="editorial-item">
+        <img src="img/editorial1.jpg" alt="Amélie Atelier Editorial Collection">
+      </div>
+      <div class="editorial-item">
+        <img src="img/editorial2.jpg" alt="Amélie Atelier Behind the Scenes">
+      </div>
+      <div class="editorial-item">
+        <img src="img/editorial3.jpg" alt="Amélie Atelier Bridal Gown">
+      </div>
+      <div class="editorial-item">
+        <img src="img/editorial4.jpg" alt="Amélie Atelier Veil Detail">
+      </div>
+      <div class="editorial-item">
+        <img src="img/editorial5.jpg" alt="Amélie Atelier Bridal Accessories">
+      </div>
+      <div class="editorial-item">
+        <img src="img/editorial6.jpg" alt="Amélie Atelier Elegant Gown">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer con formulario -->
+  <footer id="appointments">
+    <div class="footer-content">
+      
+      <!-- Logo izquierda -->
+      <div class="footer-logo">
+        <img src="img/logoAA.png" alt="Amélie Atelier Logo">
+      </div>
+
+      <!-- Formulario centro -->
+      <div class="footer-form">
+        <h3>Reservá tu cita</h3>
+        <form id="appointmentForm">
+          <input type="text" placeholder="Nombre" required>
+          <input type="date" placeholder="Fecha" required>
+          <button type="submit">Cita Reservada</button>
+        </form>
+      </div>
+
+      <!-- Crédito derecha -->
+      <div class="footer-credit">
+        <p><strong>Creado por Guadalupe Erripa</strong></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Carrito lateral -->
+  <div id="cartOverlay" class="cart-overlay">
+    <div class="cart-panel">
+      <button id="closeCart" class="close-btn">&times;</button>
+      <h2 class="cart-title">MY BAG (<span id="cart-count">0</span>)</h2>
+      <div id="cart-content" class="cart-content">
+        <p class="empty-cart">YOUR CART IS EMPTY</p>
+      </div>
+      <div class="cart-footer">
+        <a href="shop.html" class="cart-link">SHOP</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="script.js"></script>
+
+  <script>
+    // Smooth scroll para los links del menú
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Formulario de citas con SweetAlert
+    const appointmentForm = document.getElementById('appointmentForm');
+    if (appointmentForm) {
+      appointmentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        Swal.fire({
+          icon: 'success',
+          title: '¡Cita Reservada!',
+          text: 'Nos pondremos en contacto contigo pronto',
+          confirmButtonColor: '#000',
+          confirmButtonText: 'Perfecto'
+        });
+        appointmentForm.reset();
+      });
+    }
+  </script>
 </body>
 </html>
-
