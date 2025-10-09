@@ -119,7 +119,6 @@ const productos = [
   { name: "Sophia Mini Dress", price: 1750, image: "img/dress2a.webp", hover: "img/dress2b.webp" },
   { name: "Alaia Dress", price: 2100, image: "img/dress3a.webp", hover: "img/dress3b.jpg" },
   { name: "Juliet Gown", price: 6950, image: "img/dress4a.webp", hover: "img/dress4b.webp" },
-  { name: "Treasure Chest", price: 1250, image: "img/dress10a.webp", hover: "img/dress10b.webp" }
 ];
 
 function renderCatalogo() {
@@ -235,6 +234,9 @@ if (appointmentForm) {
     appointmentForm.reset(); 
   });
 }
+
+
+
 
 
 
