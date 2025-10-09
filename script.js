@@ -70,7 +70,7 @@ function updateCart() {
           <button class="btn-qty minus" data-index="${index}">−</button>
           <span>${item.quantity}</span>
           <button class="btn-qty plus" data-index="${index}">+</button>
-          <span class="item-price">$${(item.price * item.quantity).toLocaleString()}</span>
+          <span class="item-price">€${(item.price * item.quantity).toLocaleString()}</span>
           <button class="remove-item" data-index="${index}">✕</button>
         </div>
       `;
@@ -80,7 +80,7 @@ function updateCart() {
     // muestro el total final
     const totalDiv = document.createElement('div');
     totalDiv.classList.add('cart-total');
-    totalDiv.innerHTML = `<p><strong>Total:</strong> $${total.toLocaleString()}</p>`;
+    totalDiv.innerHTML = `<p><strong>Total:</strong> €${total.toLocaleString()}</p>`;
     cartContent.appendChild(totalDiv);
 
     const clearBtn = document.createElement('button');
@@ -132,7 +132,7 @@ function renderCatalogo() {
         <img src="${prod.hover}" class="img-fluid hover-img" alt="${prod.name} alternate view">
       </div>
       <h6 class="product-name">${prod.name}</h6>
-      <p class="price">$${prod.price.toLocaleString()}</p>
+      <p class="price">€${prod.price.toLocaleString()}</p>
       <button class="btn btn-outline-dark btn-sm add-to-cart"
               data-name="${prod.name}"
               data-price="${prod.price}">
