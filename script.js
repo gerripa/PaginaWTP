@@ -187,7 +187,6 @@ cartContent.addEventListener('click', (e) => {
   updateCart(); 
 });
 
-
 if (openCart) openCart.addEventListener('click', (e) => {
   e.preventDefault();
   cartOverlay.classList.add('active');
@@ -196,13 +195,10 @@ if (closeCart) closeCart.addEventListener('click', () => {
   cartOverlay.classList.remove('active');
 });
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
   renderCatalogo();
   updateCart();
 });
-
 
 // para q los link tocas y se mueva "suaaave"
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
