@@ -65,14 +65,17 @@ function updateCart() {
       div.classList.add('cart-item');
 
       div.innerHTML = `
-        <p><strong>${item.name}</strong></p>
-        <div class="cart-controls">
-          <button class="btn-qty minus" data-index="${index}">−</button>
-          <span>${item.quantity}</span>
-          <button class="btn-qty plus" data-index="${index}">+</button>
-          <span class="item-price">€${(item.price * item.quantity).toLocaleString()}</span>
-          <button class="remove-item" data-index="${index}">✕</button>
+        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+        <div class="cart-item-details">
+          <p class="cart-item-name">${item.name}</p>
+          <p class="cart-item-price">€${item.price.toLocaleString()}</p>
+          <div class="cart-controls">
+            <button class="btn-qty minus" data-index="${index}">−</button>
+            <span class="cart-qty-number">${item.quantity}</span>
+            <button class="btn-qty plus" data-index="${index}">+</button>
+          </div>
         </div>
+        <button class="remove-item" data-index="${index}">×</button>
       `;
       cartContent.appendChild(div);
     });
@@ -80,7 +83,7 @@ function updateCart() {
     // muestro el total final
     const totalDiv = document.createElement('div');
     totalDiv.classList.add('cart-total');
-    totalDiv.innerHTML = `<p><strong>Total:</strong> €${total.toLocaleString()}</p>`;
+    totalDiv.innerHTML = `<span>Total:</span><span>€${total.toLocaleString()}</span>`;
     cartContent.appendChild(totalDiv);
 
     const clearBtn = document.createElement('button');
@@ -147,13 +150,18 @@ function renderCatalogo() {
       const name = button.dataset.name;
       const price = parseFloat(button.dataset.price);
 
+      const productData = productos.find(p => p.name === name);
       const existing = cartItems.find(i => i.name === name);
       if (existing) {
         existing.quantity++;
       } else {
-        cartItems.push({ name, price, quantity: 1 });
+        cartItems.push({ 
+          name, 
+          price, 
+          quantity: 1,
+          image: productData.image 
+        });
       }
-
       updateCart(); // limpio el carrito
 
       Swal.fire({

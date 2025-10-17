@@ -251,16 +251,26 @@ header {
   letter-spacing: 0.08em;
   color: #555;
 }
+
 .cart-footer {
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
   padding-bottom: 30px;
 }
 .cart-link {
   font-style: italic;
-  text-decoration: underline;
+  text-decoration: none;
+  color: #888;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.cart-link:hover {
   color: #000;
-  font-size: 14px;
+  border-bottom-color: #000;
 }
 
 /* Sección título y catálogo */
@@ -335,34 +345,78 @@ header {
 /* CARRITO: ITEMS, BOTONES, CANTIDAD Y TOTAL */
 .cart-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  padding: 6px 0;
+  gap: 15px;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 20px 0;
+  position: relative;
 }
-.cart-item p { font-size: 14px; margin: 0; }
+
+.cart-item-image {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.cart-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item-name {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin: 0;
+  padding-right: 25px;
+}
+
+.cart-item-price {
+  font-size: 14px;
+  color: #666;
+  letter-spacing: 0.02em;
+}
 
 /* Botón para eliminar un producto */
 .remove-item {
+  position: absolute;
+  top: 20px;
+  right: 0;
   background: none;
-  border: 1px solid #ccc;
-  color: #333;
-  font-size: 12px;
-  padding: 2px 8px;
-  border-radius: 12px;
+  border: none;
+  color: #bbb;
+  font-size: 22px;
+  padding: 0;
   cursor: pointer;
   transition: all 0.2s ease;
+  line-height: 1;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .remove-item:hover {
-  background-color: #000;
-  color: #fff;
+  color: #333;
 }
 
 /* Total del carrito */
+/* Total del carrito */
 .cart-total {
-  margin-top: 15px;
-  font-size: 14px;
-  text-align: right;
+  margin-top: 35px;
+  margin-bottom: 5px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  color: #333;
 }
 
 /* Botones del carrito */
@@ -370,94 +424,96 @@ header {
 .btn-buy {
   display: block;
   width: 100%;            
-  max-width: 200px;       
   margin: 10px auto 0;    
-  padding: 10px 0;
-  font-size: 14px;
+  padding: 16px 0;
+  font-size: 11px;
   font-family: 'Cormorant Garamond', serif;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   transition: all 0.3s ease;
   cursor: pointer;
+  border-radius: 0;
+  font-weight: 400;
 }
 
-/* estilos individuales */
 .btn-clear {
-  border: 1px solid #000;
-  background: none;
-  color: #000;
+  border: 1px solid rgba(0,0,0,0.18);
+  background: #fff;
+  color: #666;
 }
 .btn-clear:hover {
-  background: #000;
-  color: #fff;
+  border-color: rgba(0,0,0,0.4);
+  color: #333;
 }
 .btn-buy {
   background: #000;
   color: #fff;
-  border: none;
+  border: 1px solid #000;
+  margin-top: 6px;
 }
 .btn-buy:hover {
-  background: #333;
-  transform: scale(1.03);
+  background: #1a1a1a;
 }
-
 
 /* Botón Add to Bag  */
 .add-to-cart {
   display: inline-block;
   width: 100%;
-  max-width: 120px;        
-  margin-top: 4px;
-  padding: 5px 0;          
-  font-size: 12px;         
+  max-width: 130px;        
+  margin-top: 10px;
+  padding: 9px 0;          
+  font-size: 11px;         
   font-family: 'Cormorant Garamond', serif;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   background-color: #fff;
   color: #000;
-  border: 1px solid #bcb5b1;
+  border: 1px solid rgba(0,0,0,0.2);
   cursor: pointer;
   transition: all 0.25s ease;
+  border-radius: 2px;
 }
 
 /* efecto hover */
 .add-to-cart:hover {
   background-color: #000;
   color: #fff;
-  transform: scale(1.01);
+  border-color: #000;
 }
-
 
 /* Botones de cantidad */
 .cart-controls {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 10px;
+  gap: 12px;
 }
 .btn-qty {
-  border: 0.8px solid #333;
-  background-color: transparent;
+  border: 1px solid rgba(0,0,0,0.15);
+  background-color: #fff;
   width: 28px;
   height: 28px;
-  border-radius: 6px;
-  font-size: 14px;
-  line-height: 26px;
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: 1;
   text-align: center;
-  color: #333;
+  color: #555;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
   font-family: 'Cormorant Garamond', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn-qty:hover {
-  background-color: #111;
+  background-color: #000;
   color: #fff;
-  border-color: #111;
-  transform: scale(1.06);
+  border-color: #000;
 }
-.item-price {
-  min-width: 70px;
-  text-align: right;
-  font-size: 15px;
-  color: #222;
+.cart-qty-number {
+  min-width: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
 }
 
 /* style para el checkout html */
@@ -772,6 +828,7 @@ footer {
   text-align: center;             
   align-items: center;            
 }
+
 
 
 
