@@ -1,12 +1,11 @@
-/* tipografia y estilo generlar d emi marcaaa*/
 
+/* tipografia y estilo generlar d emi marcaaa*/
 body {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
   background-color: #f8f7f3;
   color: #333;
 }
-
 /* Header fijo */
 header {
   position: fixed;
@@ -15,7 +14,6 @@ header {
   background-color: #f8f7f3;
   z-index: 1000;
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -24,7 +22,6 @@ header {
   height: 90px;
   box-sizing: border-box;
 }
-
 /* Menú principal de enlaces */
 .navbar ul {
   list-style: none;
@@ -33,7 +30,6 @@ header {
   margin: 0;
   padding: 0;
 }
-
 /* Enlaces del menú */
 .navbar a {
   text-decoration: none;
@@ -41,7 +37,6 @@ header {
   position: relative;
   transition: all 0.3s ease;
 }
-
 /* Subrayado animado para cuandi paso el mouse */
 .navbar a::after {
   content: "";
@@ -56,7 +51,6 @@ header {
 .navbar a:hover::after {
   width: 100%;
 }
-
 /* Logo centrado */
 .logo {
   position: absolute;
@@ -76,14 +70,12 @@ header {
   margin: 8px 0 0 0;
   color: #777;
 }
-
 /* Ícono del carrito */
 .fa-bag-shopping {
   font-size: 20px;
   color: #333;
   transition: all 0.3s ease;
 }
-
 /* Video de la portada */
 .hero video {
   width: 100%;
@@ -91,9 +83,7 @@ header {
   object-fit: cover;
   margin-top: 0;
 }
-
-
-/* Menú desplegable para móvil */
+/* Menú desplegable para telefono */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -113,7 +103,6 @@ header {
   border-radius: 1px;
   transition: all 0.3s ease;
 }
-
 /* Capa oscura semitransparente de fondo */
 .overlay {
   position: fixed;
@@ -128,7 +117,6 @@ header {
   display: block;
   opacity: 1;
 }
-
 /* Botón de sonido */
 .sound-btn {
   position: absolute;
@@ -145,57 +133,7 @@ header {
   color: rgba(255, 255, 255, 1);
   transform: scale(1.1);
 }
-
-/* Versión telefonooo*/
-@media (max-width: 768px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    padding: 0 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    background-color: #f8f7f3;
-    position: relative;
-  }
-  .menu-toggle { display: flex; }
-  .logo h1 { font-size: 17px; letter-spacing: 0.15em; }
-  .menu-toggle { display: flex; }
-  .logo h1 { font-size: 17px; letter-spacing: 0.15em; }
-  .bag {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 12%;
-    right: 20px;
-    transform: translateY(-50%);
-    font-size: 22px;
-  }
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #f8f7f3;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    margin: 0;
-    padding: 20px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  .navbar ul.active {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    animation: slideDown 0.3s ease;
-    z-index: 1001;
-  }
-  @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-}
+/* Versión telefonooo MEDIA*/
 
 /* Carrito lateral */
 .cart-overlay {
@@ -272,7 +210,6 @@ header {
   color: #000;
   border-bottom-color: #000;
 }
-
 /* Sección título y catálogo */
 .shop-header {
   margin-top: 140px;
@@ -284,7 +221,6 @@ header {
   font-size: 13px;
   text-transform: uppercase;
 }
-
 /* Efecto de cambio de imagen al pasar el mouse */
 .product-image {
   position: relative;
@@ -341,7 +277,6 @@ header {
 .product:hover img {
   transform: scale(1.02);
 }
-
 /* CARRITO: ITEMS, BOTONES, CANTIDAD Y TOTAL */
 .cart-item {
   display: flex;
@@ -351,7 +286,6 @@ header {
   padding: 20px 0;
   position: relative;
 }
-
 .cart-item-image {
   width: 80px;
   height: 110px;
@@ -359,14 +293,12 @@ header {
   border-radius: 4px;
   flex-shrink: 0;
 }
-
 .cart-item-details {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
 .cart-item-name {
   font-size: 15px;
   font-weight: 400;
@@ -374,13 +306,11 @@ header {
   margin: 0;
   padding-right: 25px;
 }
-
 .cart-item-price {
   font-size: 14px;
   color: #666;
   letter-spacing: 0.02em;
 }
-
 /* Botón para eliminar un producto */
 .remove-item {
   position: absolute;
@@ -403,8 +333,6 @@ header {
 .remove-item:hover {
   color: #333;
 }
-
-/* Total del carrito */
 /* Total del carrito */
 .cart-total {
   margin-top: 35px;
@@ -418,7 +346,6 @@ header {
   font-weight: 400;
   color: #333;
 }
-
 /* Botones del carrito */
 .btn-clear,
 .btn-buy {
@@ -435,7 +362,6 @@ header {
   border-radius: 0;
   font-weight: 400;
 }
-
 .btn-clear {
   border: 1px solid rgba(0,0,0,0.18);
   background: #fff;
@@ -454,7 +380,6 @@ header {
 .btn-buy:hover {
   background: #1a1a1a;
 }
-
 /* Botón Add to Bag  */
 .add-to-cart {
   display: inline-block;
@@ -473,14 +398,12 @@ header {
   transition: all 0.25s ease;
   border-radius: 2px;
 }
-
 /* efecto hover */
 .add-to-cart:hover {
   background-color: #000;
   color: #fff;
   border-color: #000;
 }
-
 /* Botones de cantidad */
 .cart-controls {
   display: flex;
@@ -515,7 +438,6 @@ header {
   font-size: 14px;
   color: #333;
 }
-
 /* style para el checkout html */
 .checkout {
   padding-top: 160px; 
@@ -561,8 +483,7 @@ header {
   background-color: #333;
   transform: scale(1.03);
 }
-
-/*mensaje de gracias cuando ponene okayyy*/
+/*mensaje de gracias cuando ponene comprar*/
 .thanks {
   display: none;
   margin-top: 40px;
@@ -587,7 +508,6 @@ header {
   opacity: 0.95;
   margin-top: 30px;
 }
-
 /* Sección del carrusel, lo saque de bootstarp (espejo + about us) */
 .carousel-section {
   min-height: 100vh;
@@ -639,7 +559,6 @@ header {
   font-weight: 300;
   letter-spacing: 0.02em;
 }
-
 /* Flechas del carrusel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -647,12 +566,10 @@ header {
   border-radius: 50%;
   padding: 20px;
 }
-
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
   background-color: rgba(171, 124, 82, 0.5);
 }
-
 /* Sección editorial */
 .editorial-section {
   background-color: #fff;
@@ -687,7 +604,6 @@ header {
 .editorial-item:hover img {
   transform: scale(1.05);
 }
-
 /* Footer con formulario */
 footer {
   background-color: #f8f7f3;
@@ -756,9 +672,101 @@ footer {
   color: #555;
   font-weight: 400;
 }
+/* Volver al inicio del checkout VER LO DE LOS # */
+#backHome a {
+  color: #000;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #000;
+  transition: opacity 0.3s ease;
+}
+#backHome a:hover {
+  opacity: 0.6;
+}
+#cart-count-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* para centarar el boton y todo lo de las fotitos o arjeta de las fotos  */
+.product {
+  text-align: center;             
+  align-items: center;            
+}
 
-/* Responsive PARA Q SE AVEA BIEN EL LOS TELELFONOS */
+/* MEDIA*/
 @media (max-width: 768px) {
+  /* header  menu */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: #f8f7f3;
+    position: relative;
+  }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22px;
+    height: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .logo h1 {
+    font-size: 17px;
+    letter-spacing: 0.15em;
+  }
+  .bag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+  }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f8f7f3;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    margin: 0;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .navbar ul.active {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: slideDown 0.3s ease;
+    z-index: 1001;
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  /* editorial, about us y footer*/
   .editorial-grid {
     grid-template-columns: 1fr;
   }
@@ -794,40 +802,9 @@ footer {
   }
 }
 
-/* Volver al inicio del checkout VER LO DE LOS ################ */
-#backHome a {
-  color: #000;
-  text-decoration: none;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 15px;
-  letter-spacing: 0.05em;
-  border-bottom: 1px solid #000;
-  transition: opacity 0.3s ease;
-}
-#backHome a:hover {
-  opacity: 0.6;
-}
-#cart-count-badge {
-  position: absolute;
-  top: -6px;
-  right: -10px;
-  background-color: #000;
-  color: #fff;
-  font-size: 10px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-/* ver si me quedaron repetidos los respodive mediaaaaaaaaaaa */
-/* para centarar el boton y todo lo de las fotitos o arjeta de las fotos  */
-.product {
-  text-align: center;             
-  align-items: center;            
-}
+
+
 
 
 

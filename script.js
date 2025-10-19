@@ -9,7 +9,7 @@ const soundIcon = document.getElementById('soundIcon');
 if (soundBtn && video) {
   soundBtn.addEventListener('click', () => {
     video.muted = !video.muted;
-    soundIcon.textContent = video.muted ? '🔇' : '🔊'; //la funcion de ? q vimos 
+    soundIcon.textContent = video.muted ? '🔇' : '🔊'; 
   });
 }
 
@@ -32,7 +32,7 @@ if (overlay) {
   });
 }
 
-//carrioooooooooooo 
+//carrito
 //Esta parte como que agarra/recupera el carrito del usuario que estaba guardado en el navegador.
 //Si es la primera vez que entra, crea un carrito vacío ([]) para empezar.
 let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
@@ -111,7 +111,7 @@ function updateCart() {
   badge.textContent = cartItems.length;
 }
 
-//aca va el catalogo de los profcutos aro el array con cada  unno q aparece
+//aca va el catalogo de los profcutos aro el array con cada  unno q aparece (si agrego un porducto lo agrego aca)
 const productos = [
   { name: "Isolde Dress", price: 2450, image: "img/dress5a.webp", hover: "img/dress5b.webp" },
   { name: "Clarisse Dress", price: 2750, image: "img/dress8a.webp", hover: "img/dress8b.webp" },
@@ -144,7 +144,7 @@ function renderCatalogo() {
     </div>
   `).join(''); 
 
-  // para add tod e bag
+  // para add to the bag
   document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', () => {
       const name = button.dataset.name;
@@ -177,8 +177,7 @@ function renderCatalogo() {
   });
 }
 
-//para atodo lo q es el carrito
-
+//para atodo lo q es el carrito add event etc 
 cartContent.addEventListener('click', (e) => {
   const index = e.target.dataset.index;
   if (e.target.classList.contains('remove-item')) {
